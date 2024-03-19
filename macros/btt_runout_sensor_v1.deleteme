@@ -1,0 +1,10 @@
+[filament_motion_sensor encoder_sensor]
+detection_length: 12
+extruder: extruder
+switch_pin: PG10
+pause_on_runout: True
+insert_gcode:
+    M117 Insert Detected
+runout_gcode:
+    M117 Runout Detected
+
