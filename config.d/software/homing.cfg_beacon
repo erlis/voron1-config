@@ -1,7 +1,0 @@
-[safe_z_home]
-##	XY Location of the Z Endstop Switch
-##	Update -100,-100 to the XY coordinates of your endstop pin 
-##	(such as 157,305) after going through Z Endstop Pin
-##	Location Definition step.
-home_xy_position: 150, 150 # update for your machine
-z_hop: 3
