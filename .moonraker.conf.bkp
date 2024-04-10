@@ -1,7 +1,8 @@
 [server]
 host = 0.0.0.0
 port = 7125
-max_upload_size = 1024
+max_upload_size = 102400
+klippy_uds_address = /home/pi/printer_data/comms/klippy.sock
 
 [file_manager]
 enable_object_processing = True
@@ -32,14 +33,6 @@ refresh_interval = 168
 type = web
 repo = mainsail-crew/mainsail
 path = ~/mainsail
-
-[update_manager Klipper-Adaptive-Meshing-Purging]
-type = git_repo
-channel = dev
-path = ~/Klipper-Adaptive-Meshing-Purging
-origin = https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
-managed_services = klipper
-primary_branch = main
 
 [update_manager beacon]
 type = git_repo
