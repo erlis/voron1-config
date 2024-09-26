@@ -65,3 +65,11 @@ system_dependencies = system-dependencies.json
 primary_branch = main
 managed_services = klipper
 
+[update_manager nevermore]
+type = git_repo
+path = ~/nevermore-controller
+origin = https://github.com/sanaahamel/nevermore-controller.git
+primary_branch = main
+is_system_service = False
+managed_services = klipper
+
