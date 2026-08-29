@@ -68,11 +68,16 @@ grab_version(){
 # Note that that format is for changing things after the repository is in use, vs initially
 
 push_config(){
-  cd $config_folder
-  git pull origin master
+  set -e
+  cd "$config_folder"
+  git pull --rebase --autostash origin master
   git add .
-  current_date=$(date +"%Y-%m-%d %T")
-  git commit -m "Autocommit from $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
+  if git diff --cached --quiet; then
+    echo "No config changes to commit"
+  else
+    current_date=$(date +"%Y-%m-%d %T")
+    git commit -m "Autocommit from $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
+  fi
   git push origin master
 }
 
